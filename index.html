@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Gwyneth</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Floating Name Animation */
+    .floating-name {
+      position: fixed;
+      font-size: 18px;
+      color: rgba(255,255,255,0.6);
+      animation: floatUp linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(0.8);
+        opacity: 0;
+      }
+      20% { opacity: 1; }
+      100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    .container {
+      background: white;
+      max-width: 800px;
+      width: 90%;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      z-index: 2;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      text-align: center;
+      color: #e91e63;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      white-space: pre-wrap;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-style: italic;
+      color: #888;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 12px;
+      background: #e91e63;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #d81b60;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="container">
+    <h1>Hi Gwyneth 💌</h1>
+
+    <button onclick="unlockMessage()">Click to read my confession</button>
+
+    <div id="message" style="display:none;"></div>
+
+    <div class="footer">— From someone who admires you</div>
+  </div>
+
+  <script>
+    // Floating names generator
+    function createFloatingName() {
+      const name = document.createElement("div");
+      name.className = "floating-name";
+      name.innerText = "Gwyneth 💗";
+
+      name.style.left = Math.random() * 100 + "vw";
+      name.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+      document.body.appendChild(name);
+
+      setTimeout(() => {
+        name.remove();
+      }, 8000);
+    }
+
+    setInterval(createFloatingName, 800);
+
+    const text = `Hello Gwyneth, sorry for interrupting you again, this is the last confession i have send to you. Alam ko weird nato pero dapat ganto ko talaga sya sasabihin at sana hindi ka tamarin basahin huhu. dahil second time kona to gagawin pero Eto talaga wala nang tulong ng mga friends ko to si nungay kasi promise di tulad nung una, this message is from me na talaga, kasi nung time nayon diko talaga alam kung ano yung sasabihin ko when it comes sa first move kaya nagpapatulong ako with my friends but now hindi muna nila alam to, nagkaroon uli ako ng lakas loob na sabihin sayo to. Last time kung naalala mo pa nagtatanong ka sakin kung ano yung mga nagustuhan ko sayo ngayon ko lilinawin hehe. First is kung naaalala mo yung naging ka group kita sa PERDEV bilang isang leader na nag-assign ng mga task then ikaw yung gumawa ng part about nga don sa arts na drawing, then yun na nga tinawag mo ako para pumili kung anong mas maganda at connected doon sa topic natin,. Nung nakita ko yung gawa mo non namangha ako dahil magaling ka mag drawing using digital  I'm so amaze of that i swear kasi kahit simple lang pero na appreciate ko sya sobraa and hindi lang yon meron din nung time GenChem subject na habang nagtuturo si maam topia katabi mo lang ako non na pinagmamasdan yung anime face na dino-draw mo na nakakamangha silently minsan din yung pag d-draw mo ng mga eyes ng babae or lalaki bayun?? Pero sobrang amaze talagaa ako don na diko maisip na anong imaginary na talent ang meron ka, ako nga kaya kong mag draw ng mukha, mukha ng magnanakaw haha pero atleast nakakapag drawing like u kaya nga nagsimula ako na magpadrawing sa mga forearm ko non kay nungay para mapansin mo kaso alam ko na walang kwenta kung gagawin at gagawin ko but its okay for me naman. Next, kung nung una kong ay about sa pagiging magaling mo sa arts dito naman ay sa mga numerical, halos lahat na ata nasayo haha kaya proud ako eh, but eto yung time na first quiz natin sa GenChem kay maam topia nung nakita ko score mo sa quiz 40+ something ata out of 60 yung score mo doon ako nagkaroon ng motivation na mag aral and mag review lalo kasi gusto ko mapansin mo rin ako don kaso hindi talaga kinaya pero at least i tried parin naman kaya thankful ako na nagagawa ko rin yon, meron pa yung sa Stats and Proba na ang nag check sayo si mctherence taas ng score mo non like legit?? jk, also sa BasCal dito naman nung last PETA natin sa 3rd quarter na may pinasagutan satin non sa paper na ibat-ibang topic ang galing mo kaya non kasi ikaw lang nagsagot mag isa na kahit kami nga eh sobrang dali na binigay na task eh tatlo pa kami ni mctherence and pastoral na nagsagot and if you remember narin eto yung time na may tinanong ka saamin kung yes or no yung answer pero nag joke ako non na maybe? HAHAHAA this is the time na nakita kitang ngumiti sa joke ko sobrang cute mo ngumiti na hindi kona makalimutan yung nangyari and also gusto ko rin yung pagiging randomly weird na ginagawa mo hindi kona sasabihin kung ano ano yon pero sobrang cute sya tignan sakin and another one naman is nangyari ay yung nakuhanan ako ng ID non kasama si nungay diko talaga alam gagawin ko non dahil first time kong mapunta ss guidance na ang dahilan lang ay napalitan yung ID ko kaya ang tingin ko non ay malas na araw ko kaso nung dumating kayo non kasama mo pa ata sila dizon and pedrocha nabuhayan ako kasi pati rin pala ikaw nakuhaan what a coincidence haha, pero bat naman ganun hindi na kayo pumasok kahit sa second sub kahit humabol lang sayang din kasi di kita nakita charot. Lasltyy, this is very important na part na nagustuhan ko talaga sayo una na dito ay yung hindi ka masyadong friendly to other boys pangalawa ay ang pagiging private life in social media syempre pati narin in public like me haha, hindi ko maigine na nag eexist ka pala sa mundong to hehe, siguro hanggang dito lang muna pero tingin ko madadagdagan to kung nakilala pa kita lalo, don't worry hindi ko sinabi lahat ito para i-uncrush ka syempre crush parin kita sinabi ko to ng isahan nalang para hindi ka mabother sakin na puro message at paisa isa ng chat, promise mo sakin na hindi mo ipapakita ito sa mga kaibigan mo except sa mga Best Best Friend mo talaga na nakakaalam ng mga secret and problems na alam nila sayo, especially to your someone else hindi para pagselosin siya ah, of course to clearly understand what other guys see in you or what they think about you para narin malaman nya kung papaano ka nya mas lalong pahahalagahan, moreover to know narin sakanya of how loyal ka sakanya. Tsaka hindi po porket na hindi kita pinapansin ay galit nako sayo dahil ayaw ko lang na ma bother ka sakin. Always remember po na I'll still be here waiting and secretly watching you as not a stalker ah syempre na makita kang nagiimprove, mas lalo na hindi rin ako naghihintay na magkahiwalay kayo wag naman ganon mangyari, but nag hihintay ako na makausap kapa lalo na isa rin sa pagkakamali na hindi nagawa sayo dahil nga nahihiya talaga ako. And sa paglipat mo nga pala ng section i hope na makatagpo ka ng mga taong ka vibes, humor, and maka close mo kasi napapansin ko na hindi ka na nila masyadong nakakausap, ahmmm ano paba?, wala na ata akong masasabi pero tingin ko mahaba haba pato kung nakilala lang kita lalo hehe hanggang dito :).`;
+
+    function unlockMessage() {
+      const password = prompt("Enter password to read this message:");
+      if (password === "gwen") {
+        typeWriter();
+      } else {
+        alert("Wrong password 😢");
+      }
+    }
+
+    let i = 0;
+    function typeWriter() {
+      document.getElementById("message").style.display = "block";
+      if (i < text.length) {
+        document.getElementById("message").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 15);
+      }
+    }
+  </script>
+
+</body>
+</html>
